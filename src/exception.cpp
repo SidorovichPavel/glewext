@@ -1,13 +1,7 @@
-#include <glewextlib/exception.hpp>
+#include <glewext/exception.hpp>
 
-namespace glewext
-{
-    Exception::Exception(const std::string& message)
-        :
-        message_(message)
-    {   }
+namespace glewext {
+Exception::Exception(const std::string& message) : message_(message) {}
 
-    const char* Exception::what() const noexcept {
-        return message_.c_str();
-    }
-}
+const char* Exception::what() const noexcept { return message_.c_str(); }
+}  // namespace glewext
